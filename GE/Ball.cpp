@@ -3,7 +3,7 @@
 #include <SDL.h>
 
 
-Ball::Ball(uint32_t x, uint32_t y) : GraphicsObject(x, y)
+Ball::Ball(Point position) : GraphicsObject(position)
 {
 }
 
@@ -16,8 +16,8 @@ Ball::~Ball()
 void Ball::render(SDL_Renderer* renderer)
 {
 	SDL_Rect fillRect;
-	fillRect.x = m_X;
-	fillRect.y = m_Y;
+	fillRect.x = getPosition().x();
+	fillRect.y = getPosition().y();
 	fillRect.w = 20;
 	fillRect.h = 20;
 	SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);

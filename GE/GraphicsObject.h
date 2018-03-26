@@ -1,21 +1,19 @@
 #pragma once
 
-#include <cstdint>
+#include "Point.h"
 
 class SDL_Renderer;
 
 class GraphicsObject
 {
 public:
-	GraphicsObject(uint32_t x, uint32_t y);
+	GraphicsObject(Point position);
 	~GraphicsObject();
 
 	virtual void render(SDL_Renderer* renderer) = 0;
-	uint32_t getX(void) const;
-	uint32_t getY(void) const;
+	Point getPosition(void) const;
 
-protected:
-	uint32_t m_X;
-	uint32_t m_Y;
+private:
+	Point m_position;
 };
 

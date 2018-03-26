@@ -2,10 +2,9 @@
 #include "GraphicsObject.h"
 
 
-GraphicsObject::GraphicsObject(uint32_t x, uint32_t y)
+GraphicsObject::GraphicsObject(Point position)
 {
-	m_X = x;
-	m_Y = y;
+	m_position = position;
 }
 
 
@@ -13,12 +12,8 @@ GraphicsObject::~GraphicsObject()
 {
 }
 
-uint32_t GraphicsObject::getX(void) const
+Point GraphicsObject::getPosition(void) const
 {
-	return m_X;
+	return m_position;
 }
 
-uint32_t GraphicsObject::getY(void) const
-{
-	return m_Y;
-}

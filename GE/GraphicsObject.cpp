@@ -2,8 +2,10 @@
 #include "GraphicsObject.h"
 
 
-GraphicsObject::GraphicsObject()
+GraphicsObject::GraphicsObject(uint32_t x, uint32_t y)
 {
+	m_X = x;
+	m_Y = y;
 }
 
 

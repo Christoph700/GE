@@ -5,7 +5,7 @@
 class Ball : public GraphicsObject
 {
 public:
-	Ball();
+	Ball(uint32_t x, uint32_t y);
 	~Ball();
 
 	void render(SDL_Renderer* renderer) override;

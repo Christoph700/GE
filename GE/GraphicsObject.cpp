@@ -8,10 +8,6 @@ GraphicsObject::GraphicsObject(Point position)
 }
 
 
-GraphicsObject::~GraphicsObject()
-{
-}
-
 Point GraphicsObject::getPosition(void) const
 {
 	return m_position;

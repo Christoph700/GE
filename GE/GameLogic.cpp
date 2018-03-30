@@ -11,6 +11,10 @@ GameLogic::GameLogic(SDL_Renderer* renderer) : renderer(renderer)
 
 GameLogic::~GameLogic()
 {
+	for (auto graphicsObject : graphicObjects)
+	{
+		//delete graphicsObject;
+	}
 }
 
 

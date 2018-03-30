@@ -8,7 +8,7 @@ class GraphicsObject
 {
 public:
 	GraphicsObject(Point position);
-	~GraphicsObject();
+	virtual ~GraphicsObject() { ; }
 
 	virtual void render(SDL_Renderer* renderer) = 0;
 	Point getPosition(void) const;

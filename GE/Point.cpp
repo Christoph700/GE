@@ -2,17 +2,13 @@
 #include "Point.h"
 
 
-//why do i need a default constructor and when do i use initializer list ?
-Point::Point()
+
+Point::Point() : m_X(0), m_Y(0)
 {
-	m_X = 0;
-	m_Y = 0;
 }
 
-Point::Point(int x, int y)
+Point::Point(int x, int y) : m_X(x), m_Y(y)
 {
-	m_X = x;
-	m_Y = y;
 }
 
 

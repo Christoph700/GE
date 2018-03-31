@@ -13,6 +13,7 @@ public:
 	GameLogic(SDL_Renderer* renderer);
 	~GameLogic();
 	void handleMouseEvent(Point mousePosition);
+	void run(void);
 
 private:
 	std::vector<GraphicsObject*> graphicObjects;

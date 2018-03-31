@@ -12,8 +12,9 @@ public:
 
 	virtual void render(SDL_Renderer* renderer) = 0;
 	Point getPosition(void) const;
+	void setPosition(const Point &point);
 
 private:
-	Point m_position;
+	Point m_Position;
 };
 

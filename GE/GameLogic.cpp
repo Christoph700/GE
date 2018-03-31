@@ -32,7 +32,7 @@ void GameLogic::run(void)
 	for (auto graphicsObject : graphicObjects)
 	{
 		auto currentPos = graphicsObject->getPosition();
-		graphicsObject->setPosition(Point(currentPos.x(), currentPos.y() + 1));
+		graphicsObject->setPosition(currentPos += Point(0, 1));
 		graphicsObject->render(renderer);
 	}
 

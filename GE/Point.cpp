@@ -11,6 +11,13 @@ Point::Point(int x, int y) : m_X(x), m_Y(y)
 {
 }
 
+Point &Point::operator+=(const Point & point)
+{
+	m_X += point.x();
+	m_Y += point.y();
+	return *this;
+}
+
 
 Point::~Point()
 {

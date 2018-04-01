@@ -11,18 +11,14 @@ GameLogic::GameLogic(SDL_Renderer* renderer) : renderer(renderer)
 
 GameLogic::~GameLogic()
 {
-	for(auto graphicsObject : graphicObjects)
-	{
-		//delete graphicsObject;
-	}
 }
 
 
 void GameLogic::handleMouseEvent(Point mousePosition)
 {
-	GraphicsObject *ball = new Ball(mousePosition);
-	graphicObjects.push_back(ball);
+	graphicObjects.push_back(std::make_shared<Ball>(mousePosition));
 }
+
 
 void GameLogic::run(void)
 {

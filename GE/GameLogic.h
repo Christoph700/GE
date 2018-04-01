@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <memory>
 
 class GraphicsObject;
 class Point;
@@ -16,7 +17,7 @@ public:
 	void run(void);
 
 private:
-	std::vector<GraphicsObject*> graphicObjects;
+	std::vector<std::shared_ptr<GraphicsObject>> graphicObjects;
 	SDL_Renderer* renderer;
 };
 

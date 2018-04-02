@@ -33,6 +33,9 @@
     <ClInclude Include="GameLogic.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Vector3D.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -51,6 +54,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="GameLogic.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3D.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

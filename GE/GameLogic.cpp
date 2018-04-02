@@ -5,6 +5,8 @@
 #include <chrono>
 #include "Point.h"
 #include "Ball.h"
+#include "Vector3D.h"
+
 
 GameLogic::GameLogic(SDL_Renderer* renderer) : renderer(renderer)
 {
@@ -32,7 +34,12 @@ void GameLogic::run(void)
 	for (auto graphicsObject : graphicObjects)
 	{
 		auto currentPos = graphicsObject->getPosition();
-		graphicsObject->setPosition(currentPos += Point(0, 1));
+
+		Vector3D speed(1, 2, 0);
+		Vector3D currentPosition(currentPos.x(), currentPos.y(), 0);
+		Vector3D newPosition = currentPosition + (speed * deltaTime);
+
+		graphicsObject->setPosition(Point(newPosition.x(), newPosition.y()));
 		graphicsObject->render(renderer);
 	}
 	SDL_RenderPresent(renderer);
@@ -46,5 +53,5 @@ void GameLogic::calculateDeltaTime(void)
 	auto currentTimePoint = std::chrono::steady_clock::now();
 	deltaTime = std::chrono::duration_cast<std::chrono::milliseconds>(currentTimePoint - lastTimePoint).count();
 	lastTimePoint = currentTimePoint;
-	std::cout << "deltaTime: " << deltaTime << std::endl;
+	//std::cout << "deltaTime: " << deltaTime << std::endl;
 }

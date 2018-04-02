@@ -17,6 +17,10 @@ public:
 	void run(void);
 
 private:
+	void calculateDeltaTime(void);
+
+	float deltaTime;
+
 	std::vector<std::shared_ptr<GraphicsObject>> graphicObjects;
 	SDL_Renderer* renderer;
 };
